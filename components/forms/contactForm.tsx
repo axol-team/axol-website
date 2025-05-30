@@ -185,21 +185,21 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 px-4 rounded-md transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed g-recaptcha"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 px-4 rounded-md transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed g-recaptcha flex items-center justify-center"
             data-sitekey="6Le-f38gAAAAAAgJcEBgn3Y2vqDC5hDGO_u_9YIG"
             data-callback="handleContactSubmit"
             data-action="submit"
           >
             {isSubmitting ? (
-              <>
+              <div className="flex items-center">
                 <Loader2 className="animate-spin h-4 w-4 mr-2" />
-                Sending Message...
-              </>
+                <span>Sending Message...</span>
+              </div>
             ) : (
-              <>
+              <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                Send Message
-              </>
+                <span>Send Message</span>
+              </div>
             )}
           </button>
         </form>
