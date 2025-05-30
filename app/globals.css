@@ -1,51 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
  
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --background: 150, 19%, 94%;
+    --foreground: 213, 70%, 12%;
+    --card: 0, 0%, 100%;
+    --card-foreground: 213, 70%, 12%;
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 213, 70%, 12%;
+    --primary: 315, 95%, 62%;
+    --primary-foreground: 150, 19%, 94%;
+    --primary-lighter: 315, 95%, 72%;
+    --primary-darker: 315, 90%, 52%;
+    --secondary: 52, 64%, 50%;
+    --secondary-foreground: 213, 70%, 12%;
+    --secondary-lighter: 52, 64%, 60%;
+    --secondary-darker: 52, 60%, 40%;
+    --muted: 150, 15%, 88%;
+    --muted-foreground: 213, 30%, 40%;
+    --accent: 315, 90%, 75%;
+    --accent-foreground: 213, 70%, 12%;
+    --accent-lighter: 315, 90%, 85%;
+    --accent-darker: 315, 85%, 65%;
+    --destructive: 0, 75%, 55%;
+    --destructive-foreground: 0, 0%, 98%;
+    --border: 150, 15%, 85%;
+    --input: 150, 15%, 90%;
+    --ring: 315, 70%, 65%;
     --radius: 0.5rem;
+
+    /* Base Chart Colors - Light Mode */
+    --chart-1: 210, 80%, 55%; /* Blueish */
+    --chart-1-lighter: 210, 80%, 65%;
+    --chart-1-darker: 210, 75%, 45%;
+    --chart-2: 145, 70%, 45%; /* Greenish */
+    --chart-2-lighter: 145, 70%, 55%;
+    --chart-2-darker: 145, 65%, 35%;
+    --chart-3: 45, 90%, 55%;  /* Yellowish/Orangish */
+    --chart-3-lighter: 45, 90%, 65%;
+    --chart-3-darker: 45, 85%, 45%;
+    --chart-4: 0, 80%, 60%;   /* Reddish */
+    --chart-4-lighter: 0, 80%, 70%;
+    --chart-4-darker: 0, 75%, 50%;
+    --chart-5: 270, 75%, 60%; /* Purplish */
+    --chart-5-lighter: 270, 75%, 70%;
+    --chart-5-darker: 270, 70%, 50%;
+
+    /* Custom Named Colors - Light Mode */
+    --custom-blue: 187, 58%, 64%;
+    --custom-blue-lighter: 187, 58%, 74%;
+    --custom-blue-darker: 187, 58%, 54%;
+
+    --custom-yellow: 52, 64%, 50%;
+    --custom-yellow-lighter: 52, 64%, 60%;
+    --custom-yellow-darker: 52, 64%, 40%;
+
+    --custom-purple: 253, 33%, 48%;
+    --custom-purple-lighter: 253, 33%, 58%;
+    --custom-purple-darker: 253, 33%, 38%;
   }
  
   .dark {
-    --background: 240 10% 4.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --background: 213, 15%, 10%;
+    --foreground: 210, 10%, 95%;
+    --card: 213, 15%, 15%;
+    --card-foreground: 210, 10%, 95%;
+    --popover: 213, 15%, 15%;
+    --popover-foreground: 210, 10%, 95%;
+    --primary: 315, 90%, 68%;
+    --primary-foreground: 213, 10%, 5%;
+    --primary-lighter: 315, 90%, 78%;
+    --primary-darker: 315, 85%, 58%;
+    --secondary: 52, 60%, 55%;
+    --secondary-foreground: 213, 10%, 5%;
+    --secondary-lighter: 52, 60%, 65%;
+    --secondary-darker: 52, 55%, 45%;
+    --muted: 213, 10%, 12%;
+    --muted-foreground: 210, 8%, 65%;
+    --accent: 315, 90%, 75%;
+    --accent-foreground: 213, 10%, 5%;
+    --accent-lighter: 315, 90%, 85%;
+    --accent-darker: 315, 85%, 65%;
+    --destructive: 0, 80%, 60%;
+    --destructive-foreground: 0, 0%, 98%;
+    --border: 213, 15%, 20%;
+    --input: 213, 15%, 18%;
+    --ring: 315, 85%, 70%;
+
+    /* Base Chart Colors - Dark Mode */
+    --chart-1: 210, 70%, 65%;
+    --chart-1-lighter: 210, 70%, 75%;
+    --chart-1-darker: 210, 65%, 55%;
+    --chart-2: 145, 60%, 50%;
+    --chart-2-lighter: 145, 60%, 60%;
+    --chart-2-darker: 145, 55%, 40%;
+    --chart-3: 45, 80%, 60%;
+    --chart-3-lighter: 45, 80%, 70%;
+    --chart-3-darker: 45, 75%, 50%;
+    --chart-4: 0, 70%, 65%;
+    --chart-4-lighter: 0, 70%, 75%;
+    --chart-4-darker: 0, 65%, 55%;
+    --chart-5: 270, 65%, 65%;
+    --chart-5-lighter: 270, 65%, 75%;
+    --chart-5-darker: 270, 60%, 55%;
+
+    /* Custom Named Colors - Dark Mode */
+    --custom-blue: 187, 58%, 70%;
+    --custom-blue-lighter: 187, 58%, 80%;
+    --custom-blue-darker: 187, 58%, 60%;
+
+    --custom-yellow: 52, 64%, 60%;
+    --custom-yellow-lighter: 52, 64%, 70%;
+    --custom-yellow-darker: 52, 64%, 50%;
+
+    --custom-purple: 253, 33%, 58%;
+    --custom-purple-lighter: 253, 33%, 68%;
+    --custom-purple-darker: 253, 33%, 48%;
   }
 }
  
@@ -55,6 +129,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
   }
 }
 

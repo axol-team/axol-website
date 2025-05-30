@@ -3,83 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Server, Lock, Cog, FileCode, Brain } from "lucide-react";
-
-const services = [
-  {
-    title: "Software Engineering",
-    icon: Code,
-    description:
-      "Expert guidance on software architecture and development. Provide technical leadership, code reviews, and best practices implementation for your development team.",
-    details: [
-      "Architecture design and review",
-      "Code quality improvement",
-      "Performance optimisation",
-      "Scalability planning",
-    ],
-  },
-  {
-    title: "Consulting & Technical Leadership",
-    icon: Brain,
-    description:
-      "Provide expert consulting services and technical leadership. Offer strategic guidance, technical direction, and mentorship to your team.",
-    details: [
-      "Consulting services",
-      "Technical leadership",
-      "Product direction",
-      "Mentorship",
-    ],
-  },
-  {
-    title: "Project Development",
-    icon: FileCode,
-    description:
-      "End-to-end development of custom software solutions. Deliver high-quality, scalable applications tailored to your specific business needs.",
-    details: [
-      "Requirements gathering",
-      "System design",
-      "Agile development",
-      "Testing and deployment",
-    ],
-  },
-  {
-    title: "Legacy Modernisation",
-    icon: Cog,
-    description:
-      "Upgrade and refactor outdated systems. Analyse existing systems, propose modernisation strategies, and implement upgrades with minimal disruption.",
-    details: [
-      "System analysis",
-      "Refactoring strategies",
-      "Data migration",
-      "Incremental modernisation",
-    ],
-  },
-  {
-    title: "DevOps Implementation",
-    icon: Server,
-    description:
-      "Streamline development and operations processes. Set up and optimise CI/CD pipelines, implement containerisation, and manage cloud infrastructure.",
-    details: [
-      "CI/CD pipeline setup",
-      "Container orchestration",
-      "Infrastructure as Code",
-      "Monitoring and logging",
-      "Serverless architecture",
-    ],
-  },
-  {
-    title: "Security Implementation",
-    icon: Lock,
-    description:
-      "Protect your systems from vulnerabilities. Conduct thorough security audits, implement robust authentication systems, and ensure compliance with data protection regulations.",
-    details: [
-      "Security audits",
-      "Authentication systems",
-      "Encryption implementation",
-      "Compliance management",
-    ],
-  },
-];
+import { services } from "@/lib/site_data/services";
+import Link from "next/link";
 
 export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -87,22 +12,40 @@ export default function ServicesPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <motion.h1
-        className="text-4xl font-bold text-center mb-6"
+        className="text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        My Services
+        Our Services
       </motion.h1>
-      <motion.h2
-        className="text-2xl font-semibold text-muted-foreground text-center mb-12"
+      <motion.div
+        className="max-w-3xl mx-auto mb-16 space-y-6"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        I offer a range of services to help you build and maintain your
-        software. Please click on a service to learn more.
-      </motion.h2>
+        <p className="text-3xl font-light text-primary leading-relaxed">
+          We understand the hurdles you face in this dynamic sector.
+        </p>
+
+        <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <p>
+            Education is at the heart of every product we develop. Rooted in sound, evidence-based pedagogy, our products are designed to enhance learning experiences profoundly.
+          </p>
+
+          <p>
+            Our commitment goes beyond technology. We&apos;re here to create solutions that genuinely make a difference in the lives of students and educators, driving positive change in the educational landscape. We believe in making quality EdTech accessible to everyone, everywhere. Our services extend worldwide, bringing global perspectives and inclusivity to our solutions.
+          </p>
+        </div>
+        <div className="border-l-4 border-primary pl-6 py-2 my-8">
+          <p className="text-xl">
+            Your vision is powerful and deserves a team that matches its pace and potential. At AXOL, we don&apos;t just combine your innovative ideas with our industry expertise; we elevate and deliver them.
+          </p>
+        </div>
+
+        
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
@@ -133,26 +76,36 @@ export default function ServicesPage() {
                 </p>
                 <AnimatePresence>
                   {selectedService === index && (
-                    <motion.ul
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="list-disc list-inside text-sm text-muted-foreground"
                     >
-                      {service.details.map((detail, i) => (
-                        <motion.li
-                          key={i}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: i * 0.1 }}
-                        >
-                          {detail}
-                        </motion.li>
-                      ))}
-                    </motion.ul>
+                      <ul className="list-disc list-inside text-sm text-muted-foreground mb-4">
+                        {service.details.map((detail, i) => (
+                          <motion.li
+                            key={i}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3, delay: i * 0.1 }}
+                          >
+                            {detail}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   )}
                 </AnimatePresence>
+                {service.slug && (
+                        <Link
+                          href={`/services/${service.slug}`}
+                          className="text-primary hover:text-primary/80 font-medium inline-flex items-center"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Learn More →
+                        </Link>
+                      )}
               </CardContent>
             </Card>
           </motion.div>

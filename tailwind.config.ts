@@ -24,10 +24,14 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          lighter: "hsl(var(--primary-lighter))",
+          darker: "hsl(var(--primary-darker))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          lighter: "hsl(var(--secondary-lighter))",
+          darker: "hsl(var(--secondary-darker))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -36,6 +40,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          lighter: "hsl(var(--accent-lighter))",
+          darker: "hsl(var(--accent-darker))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -45,11 +51,46 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          "1": {
+            DEFAULT: "hsl(var(--chart-1))",
+            lighter: "hsl(var(--chart-1-lighter))",
+            darker: "hsl(var(--chart-1-darker))",
+          },
+          "2": {
+            DEFAULT: "hsl(var(--chart-2))",
+            lighter: "hsl(var(--chart-2-lighter))",
+            darker: "hsl(var(--chart-2-darker))",
+          },
+          "3": {
+            DEFAULT: "hsl(var(--chart-3))",
+            lighter: "hsl(var(--chart-3-lighter))",
+            darker: "hsl(var(--chart-3-darker))",
+          },
+          "4": {
+            DEFAULT: "hsl(var(--chart-4))",
+            lighter: "hsl(var(--chart-4-lighter))",
+            darker: "hsl(var(--chart-4-darker))",
+          },
+          "5": {
+            DEFAULT: "hsl(var(--chart-5))",
+            lighter: "hsl(var(--chart-5-lighter))",
+            darker: "hsl(var(--chart-5-darker))",
+          },
+        },
+        "custom-blue": {
+          DEFAULT: "hsl(var(--custom-blue))",
+          lighter: "hsl(var(--custom-blue-lighter))",
+          darker: "hsl(var(--custom-blue-darker))",
+        },
+        "custom-yellow": {
+          DEFAULT: "hsl(var(--custom-yellow))",
+          lighter: "hsl(var(--custom-yellow-lighter))",
+          darker: "hsl(var(--custom-yellow-darker))",
+        },
+        "custom-purple": {
+          DEFAULT: "hsl(var(--custom-purple))",
+          lighter: "hsl(var(--custom-purple-lighter))",
+          darker: "hsl(var(--custom-purple-darker))",
         },
       },
       borderRadius: {

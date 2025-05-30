@@ -11,7 +11,11 @@ import {
   CardTitle,
 } from "../ui/card";
 
-export default function PostsList({ posts }: { posts: BlogPost[] }) {
+export default function PostsList({
+  posts,  
+}: {
+  posts: BlogPost[];
+}) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
       {posts.map((post, index) => (

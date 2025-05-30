@@ -1,15 +1,16 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
-    default: "Samn Dev Ltd - Professional IT Services & Development",
-    template: "%s | samn.dev",
+    default: "AXOL - Digital Education Services",
+    template: "%s | axol.co.uk",
   },
   description:
     "Expert IT consulting and development services. Specializing in modern web development, enterprise solutions, and cutting-edge technologies.",
@@ -40,13 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -69,10 +63,14 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script
+          src="https://www.google.com/recaptcha/enterprise.js?render=6Le-f38gAAAAAAgJcEBgn3Y2vqDC5hDGO_u_9YIG"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased flex flex-col items-center relative",
+          "min-h-screen bg-background font-sans antialiased",
           GeistSans.className
         )}
       >
@@ -82,9 +80,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

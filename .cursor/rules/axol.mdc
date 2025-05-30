@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+---
+/**
+ * AXOL – Business Purpose
+ *
+ * AXOL is a UK-based EdTech agency dedicated to crafting modern, secure, and scalable digital learning platforms.
+ * Our flagship product, Merve (merve.app), is a flexible, white-label Learning Management System (LMS) that
+ * empowers educators, course creators, and organizations to launch branded educational experiences with ease.
+ *
+ * Key Offerings:
+ * - **Merve Platform**: A ready-to-use LMS with essential features, allowing clients to customize branding at no
+ *   additional cost. The Pro subscription is available at £90/month, providing enhanced tools and support.
+ * - **Bespoke Solutions**: For clients seeking tailored solutions, we offer customization on top of Merve's
+ *   foundation, charging only for modifications and a perpetual license fee, ensuring cost-effective development.
+ * - **EdTech Product Consultation**: Our comprehensive assessment service evaluates digital learning tools against
+ *   14 fundamental principles, including data privacy, accessibility, cybersecurity, pedagogical design, and more.
+ *   This ensures products meet global standards and are optimized for user satisfaction.
+ *
+ * Notable Achievements:
+ * - Successfully developed a global online book library for Pickatale within three months, which was later
+ *   recognized by TIME Magazine as one of the Top 20 EdTech Apps worldwide.
+ *
+ * Our expertise extends beyond the education sector, assisting various industries in creating internal training
+ * tools and digital learning solutions. At AXOL, we combine technical proficiency with deep educational insight
+ * to deliver impactful, evidence-based EdTech products.
+ */

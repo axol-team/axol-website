@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+---
+When writing any front-end code, always use the existing Tailwind variables for colours: [tailwind.config.ts](mdc:tailwind.config.ts)
+
+Always write copy in British English
+
+Always refer to [axol.mdc](mdc:.cursor/rules/axol.mdc) to understand what our business does.
+
+Always try to use server components before using Client components.
+
+Page.tsx files should always be server components.
+
+Always break pages into components and store the components in the /components folder.
+
+Components should be stored in folders relating to their purpose, eg: Components related to Pricing, should belong in the following folder: /components/pricing
+
+Always check to see if there's a component in /components/* before attempting to create a new component.
+
+The overall UI style should be modern and polished. Any new UI elements should match what we've already created.
+
+When given instructions which contain rules that should be remembered for future work, add them to [appended.mdc](mdc:.cursor/rules/appended.mdc)
