@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
           We only use cookie information for statistical analysis purposes and then the data is removed from the system. In short, cookies help us provide a better web site by enabling us to analyse the pages that users have visited.
         </p>
         <p>
-          If you choose to make an enquiry via email through this site, or direct through telephone or other means, then only the data you provide us will be stored, and we will use this information for our correspondence together. We may subsequently ask for further details such as your phone number or a colleague's contact details. In these circumstances we will make sure it is clear exactly why we are asking for the details and it will be used within accordance to this privacy policy.
+          If you choose to make an enquiry via email through this site, or direct through telephone or other means, then only the data you provide us will be stored, and we will use this information for our correspondence together. We may subsequently ask for further details such as your phone number or a colleague&apos;s contact details. In these circumstances we will make sure it is clear exactly why we are asking for the details and it will be used within accordance to this privacy policy.
         </p>
       </section>
 
@@ -32,14 +32,14 @@ export default function PrivacyPolicyPage() {
           We collect your data solely to provide the service or information you have requested, such as to send you updates on the support ticket you have submitted, or to respond to your enquiry. We don&apos;t use your data for any kind of profiling or subsequent marketing. We do not share this data with any other company or organisation and will never sell or lease this information.
         </p>
         <p>
-          If you choose to make an enquiry via email through this site, or direct through telephone or other means, then only the data you provide us will be stored, and we will use this information for our correspondence together. We may subsequently ask for further details such as your phone number or a colleague's contact details. In these circumstances we will make sure it is clear exactly why we are asking for the details and it will be used within accordance to this privacy policy.
+          If you choose to make an enquiry via email through this site, or direct through telephone or other means, then only the data you provide us will be stored, and we will use this information for our correspondence together. We may subsequently ask for further details such as your phone number or a colleague&apos;s contact details. In these circumstances we will make sure it is clear exactly why we are asking for the details and it will be used within accordance to this privacy policy.
         </p>
       </section>
 
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-3">Who has access to your information?</h2>
         <p className="mb-3">
-          Any data collected about you by Axol will be kept under Axol's control. We will not share, sell or lease your data to any company or organisation outside Axol unless should be required to do so by law (e.g. a court order, or legal request from a law enforcement agency).
+          Any data collected about you by Axol will be kept under Axol&apos;s control. We will not share, sell or lease your data to any company or organisation outside Axol unless should be required to do so by law (e.g. a court order, or legal request from a law enforcement agency).
         </p>
         <p className="mb-3">
           We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.

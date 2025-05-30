@@ -1,5 +1,4 @@
 import { CheckCircle, Users, Shield, Clock, Rocket } from "lucide-react";
-import { Card } from "@/components/ui/card"; // Only Card is used here directly, others are via CardContent etc.
 
 export function DevelopmentApproachSection() {
   return (
