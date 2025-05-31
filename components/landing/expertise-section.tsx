@@ -4,13 +4,6 @@ export function ExpertiseSection() {
   return (
     <section className="bg-background py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Education Specialists</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            While education is our specialty, we build digital learning solutions across industries. 
-            From schools to corporate HR training tools - if it&apos;s digital learning, we&apos;re your go-to experts.
-          </p>
-        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center group hover:scale-105 transition-transform duration-300">

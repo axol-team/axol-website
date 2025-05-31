@@ -12,14 +12,16 @@ import {
   CardTitle,
 } from "../ui/card";
 
-export default function PostsList({
-  stories
+export default function StoriesList({
+  stories = []
 }: {
-  stories: BlogPost[];
+  stories?: BlogPost[];
 }) {
+  const safeStories = stories ?? [];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {stories.map((story, index) => (
+      {safeStories.map((story, index) => (
         <motion.div
           key={story.slug}
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +41,7 @@ export default function PostsList({
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex flex-wrap gap-2">
-                    {story.tags.map((tag) => (
+                    {story.tags?.map((tag) => (
                       <span
                         key={tag}
                         className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-secondary-foreground"

@@ -63,7 +63,7 @@ export function SuccessStorySection() {
                 );
               })}
             </div>
-            <div className="bg-card p-6 rounded-lg border border-accent/40 shadow-sm hover:shadow-md hover:border-accent-darker/60 transition-all duration-300">
+            <div className="bg-card p-6 rounded-lg border border-muted shadow-sm hover:shadow-md hover:border-accent-darker/60 transition-all duration-300">
               <p className="text-muted-foreground italic text-center text-lg md:text-xl leading-relaxed">
                 &quot;{story.quote}&quot;
               </p>

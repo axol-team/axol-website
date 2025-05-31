@@ -10,14 +10,14 @@ export function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Column - Content */}
         <div className="text-center lg:text-left">
-          <Badge className="mb-6 inline-flex bg-primary/10 border-primary text-primary hover:bg-primary/20">
-            <Star className="w-4 h-4 mr-1" />
-            Featured in Time Magazine&apos;s Top 20 EdTech Apps
+          <Badge className="mb-6 inline-flex bg-primary/10 text-md border-primary text-primary hover:bg-primary/20">
+            <Star className="h-full w-auto mr-1 px-2" />
+            Featured in Time Magazine&apos;s Top EdTech Companies #20
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Educational Digital
+            Digital Education
             <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Services Specialists
+              Specialists
             </span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">

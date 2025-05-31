@@ -59,7 +59,7 @@ export function DevelopmentApproachSection() {
             <div className="space-y-4">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-chart-1 mr-3" />
-                <span className="text-card-foreground">10+ years of education technology expertise</span>
+                <span className="text-card-foreground">6+ years of education technology expertise</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-chart-1 mr-3" />

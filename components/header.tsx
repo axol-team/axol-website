@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "./logo";
+import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -19,8 +20,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="container border-b">
-      <div className="flex h-16 items-center px-4 md:px-24">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b w-full">
+      <div className="container flex h-16 items-center px-4 md:px-24">
         <div className="flex w-full items-center">
           <div className="flex items-center space-x-2">
             <Link className="font-bold no-underline" href="/">
@@ -46,6 +47,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex items-center gap-4 ml-auto">
+            <ThemeToggle />
             <Link
               href="https://www.merve.app"
               className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
@@ -77,38 +79,44 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden border-t">
-          <nav className="flex flex-col px-4 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary
-                  ${pathname.startsWith(link.href) 
-                    ? "text-primary" 
-                    : "text-muted-foreground"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="flex flex-col space-y-4 pt-4 border-t">
-              <Link
-                href="https://www.merve.app"
-                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Login
-              </Link>
-              <Link
-                href="https://www.merve.app"
-                className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:brightness-90 transition text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Create Account
-              </Link>
-            </div>
-          </nav>
+          <div className="container">
+            <nav className="flex flex-col px-4 py-4 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary
+                    ${pathname.startsWith(link.href) 
+                      ? "text-primary" 
+                      : "text-muted-foreground"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="flex flex-col space-y-4 pt-4 border-t">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-muted-foreground">Theme</span>
+                  <ThemeToggle />
+                </div>
+                <Link
+                  href="https://www.merve.app"
+                  className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Login
+                </Link>
+                <Link
+                  href="https://www.merve.app"
+                  className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:brightness-90 transition text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Create Account
+                </Link>
+              </div>
+            </nav>
+          </div>
         </div>
       )}
     </header>
