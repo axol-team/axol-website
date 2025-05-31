@@ -49,13 +49,13 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4 ml-auto">
             <ThemeToggle />
             <Link
-              href="https://www.merve.app"
+              href="https://www.merve.app/login"
               className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
             >
               Login
             </Link>
             <Link
-              href="https://www.merve.app"
+              href="https://www.merve.app/signup"
               className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:brightness-90 transition"
             >
               Create Account
