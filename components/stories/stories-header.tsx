@@ -11,15 +11,15 @@ export default function StoriesHeader() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Success Stories
+        Client Success Stories & Case Studies
       </motion.h1>
       <motion.h2
-        className="text-2xl font-semibold text-muted-foreground text-center mb-12"
+        className="text-xl font-semibold text-muted-foreground text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Some stories of how we&apos;ve helped our clients.
+        Discover how we transform educational businesses through innovative solutions and proven strategies
       </motion.h2>
     </>
   );
