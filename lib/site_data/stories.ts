@@ -111,7 +111,7 @@ export const successStories: SuccessStory[] = [
     id: "letsthrive",
     title: "Let's Thrive",
     logo: "/images/stories/letsthrive.png",
-    description: "Partnering with TV Personality Baasit Siddique to transform character education through 'The 7 C's to Thrive' - helping young people develop essential traits for success",
+    description: "Partnering with TV Personality Baasit Siddiqui to transform character education through 'The 7 C's to Thrive' - helping young people develop essential traits for success",
     badgeText: "Education Innovation",
     badgeIcon: Trophy,
     badgeIconColorClass: "text-chart-3",
