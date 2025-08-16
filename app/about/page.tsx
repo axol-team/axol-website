@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="w-32 h-32 rounded-full bg-muted mx-auto mb-4 flex items-center justify-center">
               <img src="/images/team/sam_nogalski.jpeg" alt="Sam Nogaliski" className="w-full h-full object-cover rounded-full" />
             </div>
-            <h3 className="text-2xl font-semibold text-foreground mb-1">Sam Nogaliski</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-1">Sam Nogalski</h3>
             <p className="text-xl text-muted-foreground mb-3">Technical Director</p>
             <a 
               href="https://www.linkedin.com/in/nogalskisam/" 
