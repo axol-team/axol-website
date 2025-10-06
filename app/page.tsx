@@ -4,14 +4,16 @@ import { DevelopmentApproachSection } from "@/components/landing/development-app
 import { PlatformSection } from "@/components/landing/platform-section";
 import { SuccessStorySection } from "@/components/landing/success-story-section";
 import { ExpertiseSection } from "@/components/landing/expertise-section";
+import { AwardsSection } from "@/components/landing/awards-section";
 import { CtaSection } from "@/components/landing/cta-section";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-accent/5">
       <HeroSection />
-      <ExpertiseSection />
       <CoreServicesSection />
+      <ExpertiseSection />
+      <AwardsSection />
       <DevelopmentApproachSection />
       <PlatformSection />
       <SuccessStorySection />

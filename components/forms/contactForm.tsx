@@ -185,7 +185,7 @@ export default function ContactForm({ className = '' }: ContactFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 px-4 rounded-md transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed g-recaptcha flex items-center justify-center"
+            className="w-full bg-primary hover:scale-105 hover:bg-primary hover:text-primary-foreground text-primary-foreground font-medium py-3 px-4 rounded-md transition-transform duration-200 disabled:opacity-50 disabled:cursor-not-allowed g-recaptcha flex items-center justify-center disabled:hover:scale-100"
             data-sitekey="6Le-f38gAAAAAAgJcEBgn3Y2vqDC5hDGO_u_9YIG"
             data-callback="handleContactSubmit"
             data-action="submit"

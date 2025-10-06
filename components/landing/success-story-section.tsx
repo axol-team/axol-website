@@ -72,14 +72,14 @@ export function SuccessStorySection() {
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
               {story.clientSiteLink && (
-                <Button variant="outline" asChild className="w-full sm:w-auto">
+                <Button variant="outline" asChild className="w-full sm:w-auto hover:scale-105 transition-transform duration-200">
                   <Link href={story.clientSiteLink} target="_blank" rel="noopener noreferrer">
                     Client Site <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               )}
               {story.readMoreLink && (
-                <Button variant="default" asChild className="w-full sm:w-auto">
+                <Button variant="default" asChild className="w-full sm:w-auto hover:scale-105 hover:bg-primary hover:text-primary-foreground transition-transform duration-200">
                   <Link href={story.readMoreLink}>
                     Read More
                   </Link>

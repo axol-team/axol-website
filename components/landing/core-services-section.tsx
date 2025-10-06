@@ -102,7 +102,7 @@ export function CoreServicesSection() {
 
         <div className="text-center">
           <Link href="/services">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:brightness-95 text-primary-foreground text-lg px-8 py-4">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:scale-105 hover:bg-gradient-to-r hover:from-primary hover:to-accent text-primary-foreground text-lg px-8 py-4 transition-transform duration-200">
               Explore Our Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

@@ -26,13 +26,13 @@ export function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link href="https://www.merve.app/signup" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:brightness-95 text-primary-foreground text-lg px-8 py-4">
+              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:scale-105 hover:bg-gradient-to-r hover:from-primary hover:to-accent text-primary-foreground text-lg px-8 py-4 transition-transform duration-200">
                 Start with Merve Free
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link href="/stories" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 border-2 border-primary/30 hover:bg-primary/10 text-primary">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 border-2 border-primary/30 hover:scale-105 hover:bg-primary/10 hover:text-primary text-primary transition-transform duration-200">
                 View Success Stories
               </Button>
             </Link>

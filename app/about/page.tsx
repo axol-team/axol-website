@@ -1,3 +1,5 @@
+import { AwardsSection } from "@/components/landing/awards-section";
+
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
@@ -61,6 +63,8 @@ export default function AboutPage() {
           future for the next generation.
         </p>
       </section>
+
+      <AwardsSection />
 
       <section className="mb-12">
         <h2 className="text-3xl font-semibold text-foreground mb-8 text-center">Meet the Team</h2>

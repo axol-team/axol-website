@@ -10,11 +10,11 @@ export function CtaSection() {
           Partner with education technology specialists who understand your challenges and deliver proven solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-4">
+          <Button size="lg" className="bg-primary-foreground text-primary hover:scale-105 hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 transition-transform duration-200">
             Discuss Your Project
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
-          <Button variant="outline" size="lg" className="border-2 border-primary-foreground text-primary bg-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4">
+          <Button variant="outline" size="lg" className="border-2 border-primary-foreground text-primary bg-primary-foreground hover:scale-105 hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 transition-transform duration-200">
             Explore Our Services
           </Button>
         </div>
